@@ -23,20 +23,49 @@ header {
     background: white;
     padding: 0rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .logo-container {
     width: 100%;
     max-width: 1808px;
     margin: 0 auto;
-    padding: 0rem;
+    padding: 0;
+    position: relative;
 }
 
 .logo-container svg {
     width: 100%;
     height: auto;
-    max-height: 150px;
+    max-height: 176px;
     display: block;
+}
+
+
+.left-rect, .right-rect {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    z-index: 10;
+}
+
+.left-rect {
+    left: 0;
+}
+
+.color-bar-1 {
+    background-color: #90bf21;
+    height: 8.2%;
+}
+.color-bar-2 {
+    background-color: #0c81c4;
+    height: 8.2%;
+}
+
+.color-bar-3 {
+    background-color: #065179;
+    height: 8.2%;
 }
 
 /* Navegação Principal */
@@ -253,6 +282,16 @@ h3 {
     font-weight: bold;
 }
 
+@media (min-width: 1787px) {
+    .logo-container {
+        max-width: 2100px;
+    }
+    
+    .logo-container svg {
+        max-height: 210px;
+    }
+}
+
 /* Responsividade */
 @media (min-width: 1920px) {
     .logo-container {
@@ -261,6 +300,17 @@ h3 {
     
     .logo-container svg {
         max-height: 220px;
+    }
+}
+
+
+@media (min-width: 2223px) {
+    .logo-container {
+        max-width: 2700px;
+    }
+    
+    .logo-container svg {
+        max-height: 250px;
     }
 }
 
@@ -273,6 +323,18 @@ h3 {
         max-height: 260px;
     }
 }
+
+@media (min-width: 2599px) {
+    .logo-container {
+        max-width: 2820px;
+    }
+    
+    .logo-container svg {
+        max-height: 280px;
+    }
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -417,6 +479,19 @@ h3 {
 </head>
 <body>
     <header>
+        <div class="left-rect">
+            <div class="color-bar-1"></div>
+            <div class="color-bar-2"></div>
+            <div class="color-bar-3"></div>
+        </div>
+        <div class="right-rect">
+            <div class="color-bar-1"></div>
+            <div class="color-bar-2"></div>
+            <div class="color-bar-3"></div>
+        </div>
+        
+        <div class="logo-container">
+        </div>
         <div class="logo-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1808 200">
                 <style>
@@ -532,12 +607,6 @@ h3 {
                 <text x="1510" y="135" class="fonteNuclear">nuclear</text>
                 <text x="1510" y="175" class="fonteEnergia">Energia Limpa</text>
 
-                <rect width="15" height="68" x="1913" y="0" fill="#90bf21" />
-                <rect width="15" height="68" x="1913" y="66" fill="#0c81c4" />
-                <rect width="15" height="68" x="1913" y="132" fill="#065179" />
-                <rect width="15" height="68" x="-120" y="0" fill="#90bf21" />
-                <rect width="15" height="68" x="-120" y="66" fill="#0c81c4" />
-                <rect width="15" height="68" x="-120" y="132" fill="#065179" />
             </svg>
         </div>
     </header>
